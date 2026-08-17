@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5S5WHMNM');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17770151372"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17770151372');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>Свето Кръщение — Златна възпоменателна монета 999,9 | Сара Трейд</title>
@@ -396,6 +411,10 @@ footer li{margin-bottom:10px;font-size:14px;}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S5WHMNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -856,6 +875,20 @@ fbq('track', 'PageView');
           currency: 'EUR',
           content_name: 'Свето Кръщение 999,9'
         }, { eventID: eventID });
+
+        // GTM / Google Ads purchase event
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          event: 'purchase',
+          transaction_id: eventID,
+          value: state.price * state.qty,
+          currency: 'EUR',
+          items: [{
+            item_name: 'Свето Кръщение 999,9',
+            price: state.price,
+            quantity: state.qty
+          }]
+        });
 
         // image beacon fallback for ad-blocker scenarios
         var img = new Image();
